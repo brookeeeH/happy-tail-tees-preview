@@ -136,15 +136,18 @@
         <article><img src="assets/angelica-and-hera-facebook-draft.png" alt="Angelica with Hera"><div><p class="product-kicker">Life with pets</p><h3>Angelica & Hera: no regrets, plenty of personality</h3><p>A glimpse at the bond and joyful personality behind Happy Tail Tees.</p><small>Draft preview · Permission and final copy required</small></div></article>
         <article><img src="assets/hera-and-brutus-facebook-draft.png" alt="Hera and Brutus"><div><p class="product-kicker">Gotcha days</p><h3>Hera & Brutus: a happy gotcha-day memory</h3><p>Celebrating the funny, ordinary, deeply loved moments that make a family.</p><small>Draft preview · Permission and final copy required</small></div></article>
         <article class="story-callout"><div><p class="eyebrow">Share your story</p><h3>Have an adoption or foster story?</h3><p>Submit it here for Angelica to review. Selected stories may be featured after she follows up and confirms permission.</p>
-          <form id="storyForm" class="story-form" action="#" method="post" enctype="multipart/form-data">
+          <form id="storyForm" class="story-form" action="https://formspree.io/f/xjybplrj" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="New Happy Tail Story submission">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
             <label>Your name<input name="name" autocomplete="name" required></label>
             <label>Email<input name="email" type="email" autocomplete="email" required></label>
             <label>Pet's name<input name="pet_name" required></label>
-            <label>Tell us your story<textarea name="story" rows="5" required></textarea></label>
-            <label>Photo <span>(optional)</span><input name="photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <label class="full-field">Tell us your story<textarea name="story" rows="5" required></textarea></label>
+            <label class="full-field">Photo <span>(optional)</span><input name="photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
             <label class="consent"><input name="permission_to_contact" type="checkbox" required> Angelica may contact me about this submission. This does not grant permission to publish it.</label>
             <button class="button primary" type="submit">Submit your story</button>
-            <small>Mockup form · Formspree delivery will be enabled after Angelica verifies the destination email.</small>
+            <p id="storyFormStatus" class="form-status" role="status" aria-live="polite"></p>
+            <small>Submissions are reviewed by BOAZ with Angelica. Sending a story does not guarantee publication.</small>
           </form>
         </div></article>
       </div>
