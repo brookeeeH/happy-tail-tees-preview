@@ -11,6 +11,7 @@
 .brand{display:flex;align-items:center}
 .brand img{display:block;width:128px;height:70px;object-fit:contain}
 .footer-brand img{width:150px;height:82px}
+.brand-masthead{display:flex;align-items:center;justify-content:center;gap:22px;min-height:136px;padding:18px clamp(20px,5vw,76px);background:linear-gradient(105deg,#e9f9fd 0%,#fff 46%,#dff6fb 100%);border-bottom:1px solid var(--line);text-align:left}.brand-masthead img{width:190px;height:100px;object-fit:contain}.brand-masthead span{display:grid;gap:5px}.brand-masthead strong{font-family:"Fraunces",serif;font-size:clamp(34px,4.5vw,60px);line-height:.95;color:var(--ink)}.brand-masthead small{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--plum)}.header-wordmark{font-family:"Fraunces",serif;font-size:20px;font-weight:700}.site-header{top:0;height:68px}.hero-brand-lockup{display:none}@media(max-width:700px){.brand-masthead{min-height:108px;gap:12px;padding:10px 16px}.brand-masthead img{width:116px;height:76px}.brand-masthead strong{font-size:30px}.brand-masthead small{font-size:8px;letter-spacing:.08em}.header-wordmark{font-size:17px}}
 .story-art img{position:relative;z-index:2;width:min(76%,460px);filter:drop-shadow(0 18px 25px rgba(18,80,98,.16))}
 .button.primary{color:#082a34}
 .drop-strip{background:linear-gradient(90deg,#176f8b,#10bde0)}
