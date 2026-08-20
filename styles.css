@@ -5,6 +5,8 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
 /* Happy Tail Tees established brand integration — 2026-08-15 */
+.hero-brand-lockup{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}.hero-brand-lockup img{width:110px;height:auto}.hero-brand-lockup strong{font-family:"Fraunces",serif;font-size:clamp(1.5rem,3vw,2.4rem);color:var(--ink)}
+.request-section{padding:clamp(4rem,8vw,7rem) max(5vw,1.25rem);background:#f4fbfa}.request-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;max-width:900px;margin:2rem auto 1rem}.request-form label{display:grid;gap:.45rem;font-weight:700;color:var(--ink)}.request-form label span{font-weight:400}.request-form input,.request-form textarea{width:100%;box-sizing:border-box;border:1px solid #b8ceca;border-radius:12px;padding:.9rem 1rem;font:inherit;background:white}.request-notes{grid-column:1/-1}.request-form .button{justify-self:start}@media(max-width:700px){.request-form{grid-template-columns:1fr}.request-notes{grid-column:auto}.hero-brand-lockup{align-items:flex-start;flex-direction:column}}
 .site-header{background:rgba(255,255,255,.94)}
 .brand{display:flex;align-items:center}
 .brand img{display:block;width:128px;height:70px;object-fit:contain}
