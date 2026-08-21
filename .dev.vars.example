@@ -1,0 +1,6 @@
+SESSION_SECRET=generate-a-random-secret-with-at-least-32-characters
+OWNER_CODE_HASH=sha256-base64url-of-owner-code
+OWNER_LABEL=angelica
+SQUARE_ACCESS_TOKEN=set-during-authorized-square-setup
+SQUARE_LOCATION_ID=set-after-location-verification
+SQUARE_ENVIRONMENT=sandbox

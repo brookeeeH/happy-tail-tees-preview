@@ -3,6 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    if (location.hostname === 'brookeeeh.github.io') {
+      location.replace('https://happy-tail-tees-storefront.boazzone.workers.dev' + location.hash);
+    }
+  </script>
   <meta name="description" content="Happy Tail Tees — pet-themed shirts and handmade gifts created with compassion, care, and honest small-business service.">
   <title>Happy Tail Tees | Shirts for animal people</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +78,7 @@
         <button class="filter" data-filter="holders" type="button">Pencil Holders</button>
         <button class="filter" data-filter="towels" type="button">Hand Towels</button>
         <button class="filter" data-filter="bags" type="button">Fabric Bags</button>
+        <button class="filter" data-filter="potholders" type="button">Potholders</button>
       </div>
       <div class="product-grid">
         <article class="product-card" data-category="dogs">

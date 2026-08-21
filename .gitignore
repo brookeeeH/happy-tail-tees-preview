@@ -1,2 +1,6 @@
 Thumbs.db
 .DS_Store
+node_modules/
+.wrangler/
+.site/
+.dev.vars

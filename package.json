@@ -1,0 +1,16 @@
+{
+  "name": "happy-tail-tees-owner-storefront",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check worker.js && node --check owner/app.js && node --check app.js",
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "build": "npm run check && npm run prepare:assets && wrangler deploy --dry-run",
+    "dev": "npm run prepare:assets && wrangler dev",
+    "deploy": "npm run check && npm run prepare:assets && wrangler deploy",
+    "db:local": "wrangler d1 execute happy-tail-tees-owner --local --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.30.0"
+  }
+}

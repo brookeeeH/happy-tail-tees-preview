@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "happy-tail-tees-storefront",
+  "main": "worker.js",
+  "compatibility_date": "2026-08-21",
+  "preview_urls": false,
+  "vars": {
+    "OWNER_LABEL": "angelica",
+    "SQUARE_ENVIRONMENT": "sandbox"
+  },
+  "assets": {
+    "directory": ".site",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "404-page"
+  },
+  "d1_databases": [
+    {
+      "binding": "STORE_DB",
+      "database_name": "happy-tail-tees-owner",
+      "database_id": "44674c7e-4573-46d9-9a7c-fafc7a4fc1ab"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "PRODUCT_IMAGES",
+      "id": "ec1fb7c6f82c4e378e4d510fc14cf443"
+    }
+  ]
+}

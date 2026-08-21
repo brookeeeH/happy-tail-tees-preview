@@ -1,0 +1,13 @@
+.git/**
+.gitignore
+node_modules/**
+.wrangler/**
+.dev.vars*
+.assetsignore
+worker.js
+schema.sql
+package.json
+package-lock.json
+wrangler.jsonc
+README.md
+owner/app.js

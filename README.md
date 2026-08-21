@@ -54,6 +54,35 @@ Use Square as the inventory, catalog, order, customer, and payment source of tru
 
 The current mockup intentionally has no Square credentials, API calls, live checkout, taxes, shipping rules, analytics, customer data, or deployment.
 
+## Owner-Control Foundation — 2026-08-21
+
+The repository now includes a fail-closed Cloudflare Worker foundation for Angelica's owner controls:
+
+- Private, signed owner sessions with the owner-code hash and session secret stored only as Worker secrets.
+- Owner-controlled fundraiser on/off state, active fundraiser name, and customer message.
+- Product drafts with category, fulfillment method, variations, price, and quantity.
+- JPEG, PNG, or WebP product-photo uploads to a private Cloudflare KV binding, limited to 15 MB.
+- D1-backed audit history for settings, products, photos, and staging actions.
+- A guarded `ready_for_square` state. Drafts cannot publish merely because a form or photo upload succeeded.
+- Server-side Square connectivity checks with Sandbox as the default environment.
+
+The public storefront reads fundraiser state from `/api/storefront/settings` when it is hosted by the Worker. The current GitHub Pages preview remains compatible and retains its existing review controls when that API is unavailable.
+
+Square authorization, exact catalog reconciliation, image upload to Square, inventory read-back, checkout, and webhook activation remain controlled setup gates. Do not place Square credentials in this repository or any browser-delivered file.
+
+### Required hosted bindings
+
+- `STORE_DB`: D1 database initialized with `schema.sql`
+- `PRODUCT_IMAGES`: private Cloudflare KV namespace; Square becomes the long-term image authority after connection
+- `SESSION_SECRET`: random Worker secret of at least 32 characters
+- `OWNER_CODE_HASH`: SHA-256 base64url hash of Angelica's private owner code
+- `OWNER_LABEL`: non-secret audit label such as `angelica`
+- `SQUARE_ACCESS_TOKEN`: Worker secret added only during authorized Square setup
+- `SQUARE_LOCATION_ID`: verified Happy Tail Tees Square location
+- `SQUARE_ENVIRONMENT`: `sandbox` until the full acceptance test passes
+
+`npm run prepare:assets` builds a clean `.site/` directory containing only browser-delivered files. Wrangler serves that isolated directory so Worker code, D1 state, configuration, local secrets, and project documentation cannot become public assets.
+
 ## Before Production
 
 - Obtain Angelica's written approval of scope and the review/testimonial exchange.
